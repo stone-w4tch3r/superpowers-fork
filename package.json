@@ -1,6 +1,6 @@
 {
   "name": "superpowers-opencode-fork-dev-test",
-  "version": "1.0.0",
+  "version": "1.0.2",
   "description": "Superpowers plugin for OpenCode.ai - Complete software development workflow with composable skills",
   "type": "module",
   "main": ".opencode/plugins/superpowers.js",
@@ -11,8 +11,7 @@
     }
   },
   "files": [
-    ".opencode/plugins/superpowers.js",
-    "skills/"
+    ".opencode/plugins/superpowers.js"
   ],
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1"

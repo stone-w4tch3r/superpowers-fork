@@ -2,17 +2,48 @@
 
 Complete guide for using Superpowers with [OpenCode.ai](https://opencode.ai).
 
-## Quick Install
+## Quick Install (npm)
 
-Tell OpenCode:
+Add to your opencode.json (location respects OPENCODE_CONFIG_DIR):
+```json
+{
+  "plugin": ["superpowers-opencode-fork-dev-test"]
+}
+```
 
+Start OpenCode. Superpowers autoinstalls in the background.
+
+**Note:** This works only for Linux and macOS. For Windows, use the manual installation below.
+
+## Configuration
+
+Superpowers supports optional configuration in `opencode.json`:
+
+```json
+{
+  "plugin": ["superpowers-opencode-fork-dev-test"],
+  "superpowers": {
+    "autoupdate": true,
+    "autoupdate_notify": true
+  }
+}
 ```
-Clone https://github.com/obra/superpowers to ~/.config/opencode/superpowers, then create directory ~/.config/opencode/plugins, then symlink ~/.config/opencode/superpowers/.opencode/plugins/superpowers.js to ~/.config/opencode/plugins/superpowers.js, then symlink ~/.config/opencode/superpowers/skills to ~/.config/opencode/skills/superpowers, then restart opencode.
-```
+
+- `autoupdate`: Enable automatic updates (default: `true`)
+- `autoupdate_notify`: Show update notifications (default: `true`)
+
+### Custom Config Directory
+
+If you use a custom config directory via `OPENCODE_CONFIG_DIR`, the plugin automatically respects it. All installation files will be placed in your custom config directory.
 
 ## Manual Installation
 
 ### Prerequisites
+
+**When to use manual installation:**
+- You're on Windows (autoinstall not supported)
+- You want to use a forked or modified version of superpowers
+- You prefer to have full control over the installation process
 
 - [OpenCode.ai](https://opencode.ai) installed
 - Git installed

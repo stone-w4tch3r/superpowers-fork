@@ -26,7 +26,7 @@ Thanks!
 
 ## Installation
 
-**Note:** Installation differs by platform. Claude Code has a built-in plugin system. Codex and OpenCode require manual setup.
+**Note:** Installation differs by platform. Claude Code has a built-in plugin system. Codex requires manual setup. OpenCode supports both automatic and manual installation.
 
 ### Claude Code (via Plugin Marketplace)
 
@@ -68,6 +68,20 @@ Fetch and follow instructions from https://raw.githubusercontent.com/obra/superp
 **Detailed docs:** [docs/README.codex.md](docs/README.codex.md)
 
 ### OpenCode
+
+**Quick Install (npm):**
+
+Add to your opencode.json:
+
+```json
+{
+  "plugin": ["superpowers-opencode-fork-dev-test"]
+}
+```
+
+Superpowers autoinstalls in the background. **Note:** Autoinstall works on Linux and macOS only.
+
+**Manual Installation:**
 
 Tell OpenCode:
 
@@ -143,11 +157,24 @@ See `skills/writing-skills/SKILL.md` for the complete guide.
 
 ## Updating
 
+### Claude Code
 Skills update automatically when you update the plugin:
 
 ```bash
 /plugin update superpowers
 ```
+
+### OpenCode
+With the npm plugin, updates are handled automatically. Superpowers checks for updates on startup and pulls them in the background (unless disabled in config).
+
+For manual installation, update by running:
+
+```bash
+cd ~/.config/opencode/superpowers
+git pull
+```
+
+Then restart OpenCode.
 
 ## License
 
